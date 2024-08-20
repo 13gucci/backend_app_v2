@@ -1,6 +1,6 @@
 <!-- NPM Package must have -->
 
-<!-- 1. Morgan -->
+**_1. Morgan _**
 
 morgan là một middleware dùng để log các request HTTP từ client tới server trong các ứng dụng Node.js
 
@@ -12,15 +12,14 @@ morgan là một middleware dùng để log các request HTTP từ client tới 
 -   short
 -   tiny
 
-<!-- 2. Helmet -->
+**_2. Helmet _**
 
 Helmet helps secure Express apps by setting HTTP response headers.
 Cross-Site Scripting (XSS), Clickjacking, và các cuộc tấn công khác.
 
 -   Bảo vệ các thông tin mật của server
 
-<!-- 3. Compression -->
-
+**_3. Compression_**
 GIẢM BĂNG THÔNG
 
 Băng thông => tốn người dùng, tốn cả của chúng ta
