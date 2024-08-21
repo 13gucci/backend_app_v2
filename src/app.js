@@ -8,19 +8,20 @@ const app = express();
 app.use(morgan('dev'));
 app.use(helmet());
 app.use(compression());
+app.use(express.json());
+app.use(
+    express.urlencoded({
+        extended: true,
+    })
+);
 
 // Init database
+require('./database/init.mongodb');
+// const { checkOverload } = require('./helpers/check.connect.js');
+// checkOverload();
 
 // Init routing
-app.get('/', (req, res) => {
-    const strCompress = 'Hello Guys';
-
-    res.status(500).json({
-        message: 'Welcome',
-        metadata: strCompress.repeat(20000),
-    });
-});
-
+app.use('/', require('./routes/index'));
 // Handle error
 
 // Export
